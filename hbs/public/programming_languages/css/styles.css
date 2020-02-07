@@ -1,0 +1,108 @@
+body {
+    background-color: gray;
+    color: white;
+}
+
+header, main {
+    text-align: center;
+}
+
+nav, footer {
+    text-align: left;
+}
+
+nav a {
+    padding:15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration: none; /*removes underline*/
+    color: white; /*removes default blue text*/
+}
+
+#selected {
+    font-size: 2.5em;
+    color: yellow;
+}
+
+nav a:hover {
+    border-bottom: 2px orange solid;
+    font-size: 2em;
+    transition: .9s;
+}
+
+#main {
+    display: flex;
+}
+#cplusplusPicture {
+    border-radius: 50%;
+}
+
+#cplusplusCode {
+    height: 200px;
+    width: 200px;
+    display: block;
+    border: double;
+    border-color: white;
+    text-align: left;
+    
+}
+#cplusplusText {
+    flex: 1;
+}
+
+#javaPicture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+javaMain{
+    display: flex;
+}
+
+#javaCode {
+    padding-left: 10px;
+    padding-right: 10px;
+    width:200px;
+    height: 200px;
+    border: double;
+    border-color: white;
+    text-align: left;
+}
+
+swiftMain{
+    display: flex;
+}
+
+#swiftPicture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#swiftPicture img {
+    border-radius: 50%;
+}
+
+#swiftCode {
+    padding-left: 10px;
+    padding-right: 10px;
+    width:400px;
+    height: 200px;
+    border: double;
+    border-color: white;
+    text-align: left;
+}
+
+footer {
+    clear: left;
+    font-size: 0.9em;
+    color: white;
+}
+
+#CSUMBImage {
+    float: right;
+    padding-right: 50px
+}
