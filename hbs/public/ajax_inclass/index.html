@@ -1,0 +1,63 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ToDo List</title>
+
+</head>
+
+<body id="dummybodyid">
+    <div class="jumbotron">
+        <h1>Todo List</h1>
+    </div>
+    
+    <div id="content">
+        <label>Complete:</label>
+        <br><br>
+        <br>
+        <button id="send">Query Todos</button>
+        <div id="todoList">
+            <h3 id="header"> Completed: </h3>
+            <label id="stuff"></label>
+        </div>
+    </div>
+  <script>
+  
+        displayTrueFalse();
+        function displayTrueFalse() {
+            let q8ChoicesArray = [true, false];
+            for (let i = 0; i < q8ChoicesArray.length; i++) {
+                $("#content").append(` <input type="radio" name="q1" id="${q8ChoicesArray[i]}" value="${q8ChoicesArray[i]}"> <label for="${q8ChoicesArray[i]}"> ${q8ChoicesArray[i]}</label>`);
+            }
+        }
+  
+     let useranswer = $("input[name=q1]:checked").val();
+     var answer = Boolean(useranswer);
+  
+        $("#send").on("click", function() {
+             console.log(answer);
+        $.ajax({
+          method: "GET",
+          url: "https://jsonplaceholder.typicode.com/todos",
+          dataType: "json",
+          success: function(data, status) {
+              $("#header").html(`Completed: ${answer}`)
+              $("#stuff").html("<label><label>");
+              for(let i=0; i<data.length; i++) {
+                //   console.log(data[i]["completed"]);
+                if(data[i]["completed"] == answer){
+                    console.log(data[i]["completed"]);
+                    $("#stuff").append("<label>" + data[i]["title"] + "</label><br>")
+                }
+              }
+          }
+        }); //ajax
+      }); //query
+      
+      
+      
+  </script>
+</body>
+
+</html>
