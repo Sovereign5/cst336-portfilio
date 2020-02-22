@@ -1,0 +1,81 @@
+@font-face {font-family: 'Bender';src: url('webfonts/3B0F89_4_0.eot');src: url('webfonts/3B0F89_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3B0F89_4_0.woff2') format('woff2'),url('webfonts/3B0F89_4_0.woff') format('woff'),url('webfonts/3B0F89_4_0.ttf') format('truetype');}
+
+
+#dummybody {
+	font-family: Bender;
+	background-color: #D3D3D3;
+}
+
+
+nav {
+	background-color: gray;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-size: 30px;
+	letter-spacing: 5px;
+	font-family: Bender;
+}
+
+.header {
+	transition: all 0.5s ease-in-out;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+h2 {
+	font-family: Bender;
+}
+
+#container {
+	display: flex;
+	font-family: Bender;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 25px;
+	word-spacing: 5px;
+	overflow: hidden;
+	align-content: center;
+}
+
+#checklist1 {
+	width: 400px;
+}
+
+#checklist2 {
+	width: 400px;
+}
+
+#checklist3 {
+	width: 400px;
+}
+
+footer {
+	border-top: solid 1px;
+	border-left: solid 1px;
+	padding: 2px;
+	font-size: 10px;
+	float: right;
+}
+
+
+
+
+
