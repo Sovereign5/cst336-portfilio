@@ -1,0 +1,63 @@
+#body {
+    background-color: #D3D3D3;
+    padding: 15px;
+}
+
+#body h1 {
+    text-align: center;
+}
+
+#flex-container {
+    text-align: center;
+    width: 1000px;
+  display: inline-block;
+}
+
+#jumbotron {
+    float: left;
+    background-color: #f1f1f1;
+    width: 700px;
+    margin: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#rules {
+    float: right;
+    background-color: #f1f1f1;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 10px;
+}
+
+.inner {
+    transition: all 0.5s ease-in-out;
+}
+
+#rules:hover .inner {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(2);
+}
+
+#all_money {
+    font-size: 40px;
+    
+}
+
+#wheels {
+    text-align: center;
+}
+
+button {
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}

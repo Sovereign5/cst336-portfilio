@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery/AJAX -->
+        <link href="css/styles.css" rel="stylesheet" type="text/css" /> <!-- Link to CSS -->
+        <script src="js/javascript.js"></script> <!-- JavaScript -->
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" ></script> <!-- Array Shuffle -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous"> <!-- Bootstrap -->
+        <meta charset="utf-8">
+        <title>CST336 Slot Machine</title>
+    </head>
+    <body id="body">
+        <h1>CST336 Slot Machines!</h1>
+        <div id="flex-container">
+            <div id="jumbotron">
+                <p>Enter the desired amount of money you want to gamble. Every user starts</p>
+                <p>with $500.00 in the bank.</p>
+                <p>Once you drop below -$500.00, the game is over.</p>
+                <br><br>
+            </div>
+            <div id="rules">
+                <h6>Rules:</h6>
+                <label class="inner">Cherry is x2</label><br>
+                <label class="inner">Orange is x5</label><br>
+                <label class="inner">7 is x7</label><br>
+            </div>
+        </div> <!-- flex container -->
+        <div id="all_money">
+            <h3 id="user_money"></h3>
+            <label><span id="userBet"></span>How much will you bet?   $<input type="text" id="bet"></label>
+            <div id="betFeedback"></div>
+            <br><br>
+        </div>
+        <div id="wheels">
+            <h3><span id="wheels_text"></span>What will you get?</h3>
+            <button id="spin_button">SPIN THE WHEEL</button><br><br>
+            <!-- Wheels need JS code. They should be randomized with EACH button press -->
+            <div id="choices"></div>
+        </div>
+    </body>
+</html>
+
+<!--//TODO-->
+<!--Find and include several standard slot machine fruits-->
+<!--randomize which fruits are prsented after the user:-->
+<!--    Enters an amount-->
+<!--    Presses the button (pulls the lever)-->
+<!--Depending on the fruits presented, the user's money amount will change-->
+<!--STOP the user when they reach -$100.00-->
+
+    
