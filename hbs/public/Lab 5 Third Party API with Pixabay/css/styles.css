@@ -1,0 +1,29 @@
+body {
+	text-align: center;
+}
+
+#images {
+	display: flex;
+	align-content: center;	
+	text-align: center;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+    border-radius: 10%;
+}
+
+#images > div {
+	padding: 25px;
+}
+
+#verticalImage {
+	height: 100%;
+	width: 75%;
+}
+
+#horizontalImage {
+	height: 75%;
+	width: 100%;
+}
