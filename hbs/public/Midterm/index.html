@@ -43,7 +43,7 @@
 		$("button").on("click", function() {
 			var userISBN = $("#ISBNumber").val();
 			var isbn = "?bibkeys=ISBN:" + userISBN;
-			isbn = "http://openlibrary.org/api/books" + isbn + "&format=json&jscmd=data"
+			isbn = "https://openlibrary.org/api/books" + isbn + "&format=json&jscmd=data"
 			// 0451526538
         $.ajax({
           method: "GET",
