@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" ></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <title>Midterm</title>
+</head>
+<body>
+	<div class="container">
+
+		<!-- Query -->
+		<div class="jumbotron">
+			<h1>Open Library</h1>
+			<p>Please enter the ISBN of the book you'd like to retrieve</p>
+			<form>
+				<label>ISBN</label>
+				<input type="text" id="ISBNumber">
+				<button>Query</button>
+			</form>
+		</div>
+
+		<!-- Result -->
+		<div id="Results">
+			<div id="cover" class="cover">
+				
+			</div>
+			<div id="info" class="info">
+				
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$("form").submit(function(e) {
+		    e.preventDefault();
+		});
+		$("button").on("click", function() {
+			var userISBN = $("#ISBNumber").val();
+			var isbn = "?bibkeys=ISBN:" + userISBN;
+			isbn = "http://openlibrary.org/api/books" + isbn + "&format=json&jscmd=data"
+			// 0451526538
+        $.ajax({
+          method: "GET",
+          url: isbn,
+          dataType: "json",
+          success: function(data, status) {
+          	$("#cover").empty();
+          	$("#cover").append("<img src=" + data["ISBN:" + userISBN]["cover"]["large"] + "></img>");
+          	let title = (data["ISBN:" + userISBN]["title"]);
+          	let name = (data["ISBN:" + userISBN]["authors"]["0"]["name"]);
+          	let publish_date = (data["ISBN:" + userISBN]["publish_date"]);
+          	let publish_name = (data["ISBN:" + userISBN]["publishers"]["0"]["name"]);
+          	let number_of_pages = (data["ISBN:" + userISBN]["number_of_pages"]);
+          	$("#info").empty();
+          	$("#info").append("<label> Title: " + title + "</label><br>");
+          	$("#info").append("<label> Author: " + name + "</label><br>");
+          	$("#info").append("<label> Publish Year: " + publish_date + "</label><br>");
+          	$("#info").append("<label> Publisher: " + publish_name + "</label><br>");
+          	$("#info").append("<label> ISBN: " + userISBN + "</label><br>")
+          	$("#info").append("<label> Pages: " + number_of_pages + "</label><br>");
+          }
+        }); //ajax
+      }); //query
+	</script>
+</body>
+</html>
