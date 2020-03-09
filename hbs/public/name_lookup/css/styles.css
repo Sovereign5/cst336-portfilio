@@ -1,0 +1,43 @@
+.jumbotron {
+	padding: 15px;
+	text-align: center;
+	background-color: aqua;
+	border-bottom-color: black;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
+#container {
+	align-content: center;
+	display: flex;
+	margin: 20px;
+	width: 500px;
+	transition: 2s ease;
+ }
+
+#images {
+	display: flex;
+	padding-right: 10px;
+}
+
+#content {
+	font-size: 12px;
+	font-style: bold;
+}
+
+button {
+	background-color: #afeeee;
+	color: black;
+	border:none;
+	font-style: bold;
+}
+
+#nameAlert {
+	margin: 4px;
+	font-size: 20px;
+	font-style: italic;
+}
+
+#container:hover {
+	transform: scale(1.2);
+}
